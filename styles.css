@@ -73,6 +73,16 @@ h3 {
     font-size: 14px;
 }
 
+/* Styling for the new Free Flap Instruction Text */
+.flap-note {
+    font-size: 0.75rem; /* Smaller text */
+    color: #6a7c93; /* Subtle gray-blue color */
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px dashed #e7edf4; /* Subtle separation line */
+    line-height: 1.3;
+}
+
 /* TOGGLE SWITCH */
 .toggle-group {
     display: flex;
@@ -107,6 +117,9 @@ h3 {
     bottom: 2px;
     background: white;
     border-radius: 50%;
+    /* Added subtle box-shadow and border for a less "clunky" look */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e0e0e0;
     transition: 0.3s;
 }
 
