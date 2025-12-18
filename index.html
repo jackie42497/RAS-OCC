@@ -1,124 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RAS-OCC Classification</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Response-Adapted Surgery – Oral Cavity Cancer</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<div class="scale-wrapper">
+<h1>Response-Adapted Surgery in Oral Cavity Cancer</h1>
 
-    <header>
-        <h1>Response Adapted Surgery-Oral Cavity Cancer</h1>
-    </header>
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Proposed</th>
+      <th>Completed</th>
+      <th>Change</th>
+    </tr>
+  </thead>
 
-    <div class="container">
+  <tbody>
 
-        <section class="card">
-            <h2>Structures Resected</h2>
+    <!-- ================= Oral Tongue ================= -->
+    <tr class="section"><td colspan="4">Oral Tongue</td></tr>
+    <tr>
+      <td>Not required / Type 1: Mucosectomy (0)</td>
+      <td><input type="radio" name="ot-p" value="0"></td>
+      <td><input type="radio" name="ot-c" value="0"></td>
+      <td rowspan="5" class="delta" data-p="ot-p" data-c="ot-c"></td>
+    </tr>
+    <tr>
+      <td>Type 2: Partial glossectomy (1)</td>
+      <td><input type="radio" name="ot-p" value="1"></td>
+      <td><input type="radio" name="ot-c" value="1"></td>
+    </tr>
+    <tr>
+      <td>Type 3: Hemiglossectomy (2)</td>
+      <td><input type="radio" name="ot-p" value="2"></td>
+      <td><input type="radio" name="ot-c" value="2"></td>
+    </tr>
+    <tr>
+      <td>Type 4: Near total glossectomy (4)</td>
+      <td><input type="radio" name="ot-p" value="4"></td>
+      <td><input type="radio" name="ot-c" value="4"></td>
+    </tr>
+    <tr>
+      <td>Type 5: Total glossectomy (5)</td>
+      <td><input type="radio" name="ot-p" value="5"></td>
+      <td><input type="radio" name="ot-c" value="5"></td>
+    </tr>
 
-            <div class="group">
-                <h3>Oral Tongue</h3>
-                <label><input type="radio" name="oralTongue" value="0"> Not required (0)</label>
-                <label><input type="radio" name="oralTongue" value="0"> Type 1: Mucosectomy (0)</label>
-                <label><input type="radio" name="oralTongue" value="1"> Type 2: Partial glossectomy (1)</label>
-                <label><input type="radio" name="oralTongue" value="2"> Type 3: Hemiglossectomy (2)</label>
-                <label><input type="radio" name="oralTongue" value="4"> Type 4: Near total glossectomy (4)</label>
-                <label><input type="radio" name="oralTongue" value="5"> Type 5: Total glossectomy (5)</label>
-            </div>
+    <!-- ================= Skin ================= -->
+    <tr class="section"><td colspan="4">Skin Resection</td></tr>
+    <tr>
+      <td>Not required (0)</td>
+      <td><input type="radio" name="sk-p" value="0"></td>
+      <td><input type="radio" name="sk-c" value="0"></td>
+      <td rowspan="2" class="delta" data-p="sk-p" data-c="sk-c"></td>
+    </tr>
+    <tr>
+      <td>Required (2)</td>
+      <td><input type="radio" name="sk-p" value="2"></td>
+      <td><input type="radio" name="sk-c" value="2"></td>
+    </tr>
 
-            <div class="group">
-                <h3>Skin Resection</h3>
-                <label><input type="radio" name="skinResection" value="0"> Not required (0)</label>
-                <label><input type="radio" name="skinResection" value="2"> Required (2)</label>
-            </div>
+    <!-- ================= Mandible ================= -->
+    <tr class="section"><td colspan="4">Mandibulectomy</td></tr>
+    <tr>
+      <td>Not required (0)</td>
+      <td><input type="radio" name="md-p" value="0"></td>
+      <td><input type="radio" name="md-c" value="0"></td>
+      <td rowspan="3" class="delta" data-p="md-p" data-c="md-c"></td>
+    </tr>
+    <tr>
+      <td>Marginal mandibulectomy (2)</td>
+      <td><input type="radio" name="md-p" value="2"></td>
+      <td><input type="radio" name="md-c" value="2"></td>
+    </tr>
+    <tr>
+      <td>Segmental mandibulectomy (4)</td>
+      <td><input type="radio" name="md-p" value="4"></td>
+      <td><input type="radio" name="md-c" value="4"></td>
+    </tr>
 
-            <div class="group">
-                <h3>Mandibulectomy</h3>
-                <label><input type="radio" name="mandibulectomy" value="0"> Not required</label>
-                <label><input type="radio" name="mandibulectomy" value="2"> Marginal mandibulectomy (2)</label>
-                <label><input type="radio" name="mandibulectomy" value="4"> Segmental mandibulectomy (4)</label>
-            </div>
+    <!-- ================= Maxilla ================= -->
+    <tr class="section"><td colspan="4">Maxillectomy</td></tr>
+    <tr>
+      <td>Not required (0)</td>
+      <td><input type="radio" name="mx-p" value="0"></td>
+      <td><input type="radio" name="mx-c" value="0"></td>
+      <td rowspan="2" class="delta" data-p="mx-p" data-c="mx-c"></td>
+    </tr>
+    <tr>
+      <td>Required (2)</td>
+      <td><input type="radio" name="mx-p" value="2"></td>
+      <td><input type="radio" name="mx-c" value="2"></td>
+    </tr>
 
-            <div class="group">
-                <h3>Maxillectomy</h3>
-                <label><input type="radio" name="maxillectomy" value="0"> Not required</label>
-                <label><input type="radio" name="maxillectomy" value="2"> Required (2)</label>
-            </div>
-        </section>
+    <!-- ================= Neck ================= -->
+    <tr class="section"><td colspan="4">Neck Dissection</td></tr>
+    <tr>
+      <td>Not required (0)</td>
+      <td><input type="radio" name="nd-p" value="0"></td>
+      <td><input type="radio" name="nd-c" value="0"></td>
+      <td rowspan="3" class="delta" data-p="nd-p" data-c="nd-c"></td>
+    </tr>
+    <tr>
+      <td>Unilateral (1)</td>
+      <td><input type="radio" name="nd-p" value="1"></td>
+      <td><input type="radio" name="nd-c" value="1"></td>
+    </tr>
+    <tr>
+      <td>Bilateral (2)</td>
+      <td><input type="radio" name="nd-p" value="2"></td>
+      <td><input type="radio" name="nd-c" value="2"></td>
+    </tr>
 
-        <section class="card">
-            <h2>Lymph Node Basin Management</h2>
+    <!-- ================= Exposure ================= -->
+    <tr class="section"><td colspan="4">Exposure</td></tr>
+    <tr>
+      <td>Mandibulotomy (0)</td>
+      <td><input type="radio" name="ex-p" value="0"></td>
+      <td><input type="radio" name="ex-c" value="0"></td>
+      <td rowspan="3" class="delta" data-p="ex-p" data-c="ex-c"></td>
+    </tr>
+    <tr>
+      <td>Mandibulotomy required (3)</td>
+      <td><input type="radio" name="ex-p" value="3"></td>
+      <td><input type="radio" name="ex-c" value="3"></td>
+    </tr>
+    <tr>
+      <td>Cheek flap (2)</td>
+      <td><input type="radio" name="ex-p" value="2"></td>
+      <td><input type="radio" name="ex-c" value="2"></td>
+    </tr>
 
-            <div class="group">
-                <h3>Neck Dissection</h3>
-                <label><input type="radio" name="neckDissection" value="0"> Not required</label>
-                <label><input type="radio" name="neckDissection" value="1"> Unilateral (1)</label>
-                <label><input type="radio" name="neckDissection" value="2"> Bilateral (2)</label>
-            </div>
-        </section>
+    <!-- ================= Reconstruction ================= -->
+    <tr class="section"><td colspan="4">Reconstruction</td></tr>
+    <tr>
+      <td>None / Not required (0)</td>
+      <td><input type="radio" name="rc-p" value="0"></td>
+      <td><input type="radio" name="rc-c" value="0"></td>
+      <td rowspan="4" class="delta" data-p="rc-p" data-c="rc-c"></td>
+    </tr>
+    <tr>
+      <td>Free flap – base (2)</td>
+      <td><input type="radio" name="rc-p" value="2"></td>
+      <td><input type="radio" name="rc-c" value="2"></td>
+    </tr>
+    <tr>
+      <td>Free flap – soft tissue (3)</td>
+      <td><input type="radio" name="rc-p" value="3"></td>
+      <td><input type="radio" name="rc-c" value="3"></td>
+    </tr>
+    <tr>
+      <td>Free flap – bone (4)</td>
+      <td><input type="radio" name="rc-p" value="4"></td>
+      <td><input type="radio" name="rc-c" value="4"></td>
+    </tr>
 
-        <section class="card">
-            <h2>Exposure</h2>
+  </tbody>
 
-            <div class="group">
-                <h3>Mandibulotomy</h3>
-                <label><input type="radio" name="mandibulotomy" value="0"> Not required</label>
-                <label><input type="radio" name="mandibulotomy" value="3"> Required (3)</label>
-            </div>
+  <tfoot>
+    <tr>
+      <th>Total</th>
+      <th id="totalProposed">0</th>
+      <th id="totalCompleted">0</th>
+      <th id="totalChange">0</th>
+    </tr>
+  </tfoot>
+</table>
 
-            <div class="group">
-                <h3>Cheek Flap</h3>
-                <label><input type="radio" name="cheekFlap" value="0"> Not required</label>
-                <label><input type="radio" name="cheekFlap" value="2"> Required (2)</label>
-            </div>
-        </section>
-
-        <section class="card">
-            <h2>Reconstruction</h2>
-
-            <div class="group">
-                <h3>*Free Flap</h3>
-                <label><input type="radio" name="freeFlap" value="0"> Not required</label>
-                <label><input type="radio" name="freeFlap" value="2"> Required (2)</label>
-                <label><input type="radio" name="freeFlap" value="3"> Soft tissue (3)</label>
-                <label><input type="radio" name="freeFlap" value="4"> Bone (4)</label>
-                <p class="flap-note">Free flap points are designated individually; if two free flaps are required, ensure points are summed.</p>
-            </div>
-
-            <div class="group toggle-group">
-                <h3>Flap Count</h3>
-                <label class="toggle">
-                    <input type="checkbox" id="multipleFlaps">
-                    <span class="slider"></span>
-                </label>
-                <div class="toggle-labels">
-                    <span>Single</span>
-                    <span>Multiple (adds points)</span>
-                </div>
-            </div>
-        </section>
-
-        <div class="total card">
-            <h2>Proposed Surgery Score</h2>
-            <div id="totalScore">0</div>
-        </div>
-
-    </div>
-
-</div>
-
-<footer id="site-disclaimer" class="disclaimer">
-    <h3>Investigational Tool Disclaimer</h3>
-    <div>
-        <p><strong>Please be advised that this classification system is currently based on unpublished research.</strong> As such, it should **not** be used to guide patient care or prognosis in a clinical setting. It is intended solely for educational or general informational purposes and does not constitute medical advice, diagnosis, or a treatment plan.</p>
-        <p>It should not replace professional clinical judgment or consultation with a qualified healthcare provider. Usage of this tool implies acceptance that the creators are not liable for its application. We make no warranties regarding the accuracy, completeness, or currency of the data, as medical evidence is dynamic and subject to change. User data is not recorded or tracked.</p>
-    </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+<s
