@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Response-Adapted Surgery – Oral Cavity Cancer</title>
+  <title>Response-Adapted Surgery OCC Calculator</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -83,20 +83,6 @@
       <td><input type="radio" name="md-c" value="4"></td>
     </tr>
 
-    <!-- ================= Maxilla ================= -->
-    <tr class="section"><td colspan="4">Maxillectomy</td></tr>
-    <tr>
-      <td>Not required (0)</td>
-      <td><input type="radio" name="mx-p" value="0"></td>
-      <td><input type="radio" name="mx-c" value="0"></td>
-      <td rowspan="2" class="delta" data-p="mx-p" data-c="mx-c"></td>
-    </tr>
-    <tr>
-      <td>Required (2)</td>
-      <td><input type="radio" name="mx-p" value="2"></td>
-      <td><input type="radio" name="mx-c" value="2"></td>
-    </tr>
-
     <!-- ================= Neck ================= -->
     <tr class="section"><td colspan="4">Neck Dissection</td></tr>
     <tr>
@@ -114,25 +100,6 @@
       <td>Bilateral (2)</td>
       <td><input type="radio" name="nd-p" value="2"></td>
       <td><input type="radio" name="nd-c" value="2"></td>
-    </tr>
-
-    <!-- ================= Exposure ================= -->
-    <tr class="section"><td colspan="4">Exposure</td></tr>
-    <tr>
-      <td>Mandibulotomy (0)</td>
-      <td><input type="radio" name="ex-p" value="0"></td>
-      <td><input type="radio" name="ex-c" value="0"></td>
-      <td rowspan="3" class="delta" data-p="ex-p" data-c="ex-c"></td>
-    </tr>
-    <tr>
-      <td>Mandibulotomy required (3)</td>
-      <td><input type="radio" name="ex-p" value="3"></td>
-      <td><input type="radio" name="ex-c" value="3"></td>
-    </tr>
-    <tr>
-      <td>Cheek flap (2)</td>
-      <td><input type="radio" name="ex-p" value="2"></td>
-      <td><input type="radio" name="ex-c" value="2"></td>
     </tr>
 
     <!-- ================= Reconstruction ================= -->
@@ -171,4 +138,6 @@
   </tfoot>
 </table>
 
-<s
+<script src="script.js"></script>
+</body>
+</html>
