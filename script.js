@@ -1,15 +1,29 @@
-function calculateTotal() {
-    let total = 0;
+const radios = document.querySelectorAll('input[type="radio"]');
+const deltas = document.querySelectorAll('.delta');
 
-    document.querySelectorAll("input[type='radio']:checked").forEach(r => {
-        total += Number(r.value);
-    });
+radios.forEach(r => r.addEventListener('change', update));
 
-    const multiple = document.getElementById("multipleFlaps").checked;
-    if (multiple) total += 2;  // adjust if needed
-
-    document.getElementById("totalScore").textContent = total;
+function getValue(name) {
+  const selected = document.querySelector(`input[name="${name}"]:checked`);
+  return selected ? Number(selected.value) : 0;
 }
 
-document.querySelectorAll("input[type='radio'], input[type='checkbox']")
-    .forEach(input => input.addEventListener("change", calculateTotal));
+function update() {
+  let proposedTotal = 0;
+  let completedTotal = 0;
+
+  deltas.forEach(d => {
+    const p = getValue(d.dataset.p);
+    const c = getValue(d.dataset.c);
+
+    proposedTotal += p;
+    completedTotal += c;
+
+    d.textContent = p - c;
+  });
+
+  document.getElementById('totalProposed').textContent = proposedTotal;
+  document.getElementById('totalCompleted').textContent = completedTotal;
+  document.getElementById('totalChange').textContent =
+    proposedTotal - completedTotal;
+}
